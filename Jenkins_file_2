@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', credentialsId: 'd621c99b-08d8-48eb-89bd-641940992ec4', url: 'https://github.com/SalihOsman1/Tensorflow_1.git'
+            }
+        }
+    }
+}
